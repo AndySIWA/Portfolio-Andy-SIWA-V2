@@ -73,6 +73,7 @@
             font-size: 4.5rem;
             background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
             margin-bottom: 20px;
@@ -869,8 +870,10 @@
             background: rgba(5, 5, 15, 0.9);
             padding: 60px 0 30px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
             border-top: 1px solid rgba(0, 243, 255, 0.1);
-        }
+        }        
         
         .footer-logo {
             font-size: 2.5rem;
@@ -899,6 +902,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -1010,10 +1014,9 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À Propos</a></li>
-                <li><a href="#services">Services</a></li>
-                <!-- <li><a href="#competences">Compétences</a></li> -->
-                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#services">Services</a></li>                
                 <li><a href="#projets">Projets</a></li>
+                <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -1028,7 +1031,10 @@
             <p class="hero-text">Je combine expertise en <span class="hero-highlight">électrotechnique</span>, <span class="hero-highlight">électronique</span> et <span class="hero-highlight">informatique</span> pour proposer des solutions techniques innovantes qui répondent aux défis énergétiques modernes.</p>
             <div class="hero-cta">
                 <a href="#projets" class="btn">Voir mes projets</a>
-                <a href="#contact" class="btn btn-secondary">Contact direct</a>
+                <!-- <a href="#contact" class="btn btn-secondary">Contact direct</a> -->
+                <a href="https://wa.me/237652481643" class="btn btn-secondary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a></a>
             </div>
         </div>
     </section>
@@ -1039,7 +1045,7 @@
             <h2>À Propos de Moi</h2>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="images/avatar.jpg" alt="Andy SIWA">
+                    <img src="images/avatar_fond.png" alt="Andy SIWA">
                 </div>
                 <div class="about-text">
                     <p><strong>Ingénieur électricien polyvalent</strong>, je me spécialise dans la convergence des domaines électrotechniques, électroniques et informatiques pour créer des solutions innovantes.</p>
@@ -1064,8 +1070,8 @@
             <h2>Mes Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bolt"></i>
+                    <div class="service-icon">                        
+                        <i class="fas fa-plug"></i>
                     </div>
                     <h3>Électricité bâtiment</h3>
                     <p>Conception et réalisation d'installations électriques pour bâtiments résidentiels et industriels en toute conformité, garantissant sécurité et efficacité énergétique.</p>
@@ -1081,35 +1087,138 @@
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>Programmation</h3>
-                    <p>Développement d'applications windows, web et mobile.</p>
+                    <h3>Programmation informatique</h3>
+                    <p>Conception et développement de programmes informatiques pour automatiser des processus, améliorer la productivité et faciliter la gestion des systèmes.</p>            
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-microchip"></i>
+                    <div class="service-icon">                        
+                        <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Réseau électrique</h3>
-                    <p>Travaux en hauteur pour la maintenance du réseau électrique BT.</p>
-                    <p>Installation de kits de compteurs.</p>
+                    <p>
+                        Implantation de poteaux HTA/BT <br>
+                        Intervention de maintenance en hauteur <br>
+                        Branchement Eneo / Installation de kits de compteurs
+                    </p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-palette"></i>
                     </div>
-                    <h3>Création graphique</h3>
-                    <p>Développement de visuels engageant, flyers et montage photo.</p>
+                    <h3>Conception graphique</h3>
+                    <p>
+                        Création d'affiches publicitaires, flyers, étiquettes, carte de visites... <br>
+                        Création de logo et identité visuelle <br>
+                        Montage photo et retouche d'images
+                    </p>                                 
                 </div>
 
                 <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce et importation</h3>
+                    <p>
+                        Achats en ligne et fourniture d'articles<br>
+                        Personnalisation OEM de produits<br>
+                        Assistance et formation sur Alibaba.
+                    </p>
+                </div>
+
+                <!-- <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-microchip"></i>
                     </div>
                     <h3>Électronique Embarquée</h3>
                     <p>Développement de systèmes électroniques sur mesure et programmation de microcontrôleurs pour applications industrielles et domestiques.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>    
+
+    <!-- Projects Section -->
+    <section id="projets" class="projects section-hidden">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/coding.jpg" alt="Développement logiciel, codage, programmation">
+                        <div class="project-overlay">
+                            <a href="#" class="btn">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Développement logiciel</h3>
+                        <p>Création de logiciels sur mesure, développement d'applications Android et conception de sites web modernes adaptés aux besoins variés des clients.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Flutter</span>
+                            <span class="tech-item">React.js</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Django</span>                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/compteurs.jpg" alt="Installation solaire">
+                        <div class="project-overlay">
+                            <a href="#" class="btn">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Branchements PERACE</h3>
+                        <p>Réalisation de branchements neufs pour le projet PERACE; Incluant l'implantation de support bois, l'installation de kits compteurs prépayés et le raccordement au réseau de distribution</p>
+                        <div class="project-tech">                            
+                            <span class="tech-item">Branchement Eneo</span>
+                            <span class="tech-item">Support BT</span>
+                            <span class="tech-item">Compteurs prépayés</span>
+                            <span class="tech-item">Activation</span>                                               
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/pv.png" alt="Installation solaire">
+                        <div class="project-overlay">
+                            <a href="#" class="btn">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Installation Solaire Hybride</h3>
+                        <p>Conception et mise en place d'un système photovoltaïque hybride avec stockage batterie pour une maison autonome, intégrant la supervision à distance.</p>
+                        <div class="project-tech">                            
+                            <span class="tech-item">Branchement Eneo</span>
+                            <span class="tech-item">Support BT</span>
+                            <span class="tech-item">Compteurs prépayés</span>
+                            <span class="tech-item">Activation</span>                                               
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/SmartHome.png" alt="Système domotique">
+                        <div class="project-overlay">
+                            <a href="#" class="btn">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Système de supervision</h3>
+                        <p>Développement d'un système domotique centralisé avec contrôle de l'éclairage, sécurité et gestion énergétique via interface web et mobile.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">ESP32</span>
+                            <span class="tech-item">Node.js</span>
+                            <span class="tech-item">React.js</span>
+                            <span class="tech-item">VS-Code</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1118,7 +1227,7 @@
     <!-- Experience Section -->
     <section id="experiences" class="experience section-hidden">
         <div class="container">
-            <h2>Expériences Professionnelles</h2>
+            <h2>Expériences Pro.</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">Depuis Janvier 2024</div>
@@ -1162,71 +1271,6 @@
                             <li>Installation photovoltaïque</li>
                             <li>Supervision de systèmes PV hybrides avec des kits Victron Energy</li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projets" class="projects section-hidden">
-        <div class="container">
-            <h2>Mes Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Système de gestion d'énergie">
-                        <div class="project-overlay">
-                            <a href="#" class="btn">Voir les détails</a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sites web vitrines de startup</h3>
-                        <p>Conception d'un système de gestion énergétique pour habitat connecté permettant d'optimiser la consommation et d'intégrer des sources renouvelables.</p>
-                        <div class="project-tech">
-                            <span class="tech-item">Arduino</span>
-                            <span class="tech-item">IoT</span>
-                            <span class="tech-item">Python</span>
-                            <span class="tech-item">Systèmes embarqués</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/pv.png" alt="Installation solaire">
-                        <div class="project-overlay">
-                            <a href="#" class="btn">Voir les détails</a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Installation Solaire Hybride</h3>
-                        <p>Mise en place d'un système photovoltaïque hybride avec stockage batterie pour une maison autonome, intégrant la supervision via application mobile.</p>
-                        <div class="project-tech">
-                            <span class="tech-item">PVSyst</span>
-                            <span class="tech-item">Victron Energy</span>
-                            <span class="tech-item">Flutter</span>
-                            <span class="tech-item">SMA</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/SmartHome.png" alt="Système domotique">
-                        <div class="project-overlay">
-                            <a href="#" class="btn">Voir les détails</a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Système Domotique</h3>
-                        <p>Développement d'un système domotique centralisé avec contrôle de l'éclairage, sécurité et gestion énergétique via interface web et mobile.</p>
-                        <div class="project-tech">
-                            <span class="tech-item">ESP32</span>
-                            <span class="tech-item">Node.js</span>
-                            <span class="tech-item">React</span>
-                            <span class="tech-item">MQTT</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1302,13 +1346,13 @@
             <p class="footer-text">Ingénieur électricien innovant spécialisé dans les solutions énergétiques intelligentes et durables.</p>
             
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/andy-siwa-180283199/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/AndySIWA/" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/237652481643" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://web.facebook.com/andy.siwa.2025/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
             </div>
             
-            <p class="copyright">&copy; 2025 SIWA Andy SIWA. Tous droits réservés.</p>
+            <p class="copyright">&copy; 2025 Andy SIWA. Tous droits réservés.</p>
         </div>
     </footer>
 
@@ -1356,7 +1400,7 @@
             $('#mobile-toggle').click(function() {
                 $('#nav-menu').toggleClass('active');
             });
-            
+                        
             // Smooth Scrolling
             $('a[href*="#"]').on('click', function(e) {
                 e.preventDefault();
@@ -1367,6 +1411,7 @@
                 // Close mobile menu if open
                 $('#nav-menu').removeClass('active');
             });
+            
             
             // Header scroll effect
             $(window).scroll(function() {
