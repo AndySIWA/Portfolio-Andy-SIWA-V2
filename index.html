@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy SIWA | Ingénieur Électricien Innovant</title>
+    <link rel="icon" type="image/png" href="images/Logo_VoltiSmart.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -175,7 +176,23 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
+        .logo-nom {
+            display: flex;
+            align-items: center;
+        }        
+
+        .logovs {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        .logo-nom:hover img {
+            transform: scale(1.2);
+        }
+                
         .logo {
             font-size: 2rem;
             font-weight: 700;
@@ -765,7 +782,7 @@
             font-size: 0.9rem;
             border: 1px solid rgba(0, 243, 255, 0.2);
         }
-        
+
         /* Contact Section */
         .contact-container {
             display: grid;
@@ -1063,7 +1080,10 @@
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">Andy<span>SIWA</span><div class="pulse"></div></a>
+            <div class="logo-nom">
+                <img src="images/Logo_VoltiSmart_transparent.png" alt="Logo Voltismart" class="logovs">
+                <a href="#" class="logo">Andy<span>SIWA</span><div class="pulse"></div></a>
+            </div>            
             <div class="mobile-toggle" id="mobile-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -1072,6 +1092,7 @@
                 <li><a href="#apropos">À Propos</a></li>
                 <li><a href="#services">Services</a></li>                
                 <li><a href="#projets">Projets</a></li>
+                <li><a href="#brands">Marques</a></li>
                 <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1194,7 +1215,7 @@
                 </div> -->
             </div>
         </div>
-    </section>    
+    </section>
 
     <!-- Projects Section -->
     <section id="projets" class="projects section-hidden">
@@ -1276,6 +1297,53 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branding Section -->
+    <section id="brands" class="projects section-hidden">
+        <div class="container">
+            <h2>Mes Marques</h2>
+            <div class="projects-grid">                
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/Logo_VoltiSmart.png" alt="Logo VoltiSmart">
+                        <div class="project-overlay">
+                            <a href="https://web.facebook.com/profile.php?id=100087442015913" target="_blank" class="btn">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>VoltiSmart</h3>
+                        <p>Ingénierie africaine innovante pour un avenir plus smart</p>
+                        <div class="project-tech">                           
+                            <span class="tech-item">Génie Electrique</span>
+                            <span class="tech-item">Solaire photovoltaïque</span>
+                            <span class="tech-item">Informatique</span>                                                                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/Logo_lmw-shop_fond_blanc.png" alt="Logo LMW-Shop">
+                        <div class="project-overlay">
+                            <a href="#" class="btn">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>LMW-Shop : Les.Mo.Ways</h3>
+                        <p>Votre destination pour les meilleures expériences de e-commerce</p>
+                        <div class="project-tech">                           
+                            <span class="tech-item">E-commerce</span>
+                            <span class="tech-item">Alibaba</span>
+                            <span class="tech-item">Marketing digital</span>
+                            <span class="tech-item">Réseaux sociaux</span>                                               
+                        </div>
+                    </div>
+                </div>
+                                
             </div>
         </div>
     </section>
